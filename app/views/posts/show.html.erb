@@ -15,6 +15,7 @@
   <%= @post.author %>
 </p>
 
+<%= render 'posts/comment' %>
 <h2>Comments: </h2>
 
 <% @post.comments.each do |comment| %>
@@ -22,7 +23,6 @@
     <p><%= comment.text %></p>
 <% end %>
 
-<%= render 'posts/comment' %>
 
 
 
