@@ -1,7 +1,7 @@
 require "rails_helper"
 
 feature "User visits homepage" do
-  scenario "Successfully" do
+  scenario "successfully" do
     visit root_path
     expect(page).to have_content "Listing Posts"
   end
