@@ -7,15 +7,27 @@ feature "User visits homepage" do
   end
 
   scenario "User sees all posts" do
-    Post.create!(author: "John Doe", title: "John Doe goes to mars", body: "Mars is a wonderful place for vacation.")
-    Post.create!(author: "Mary Poppins", title: "Mary poppins sings death metal", body: "What the hell is that?")
-    Post.create!(author: "Richter Belmont", title: "Die, Monster!", body: "You don't belong in this world.")
-    Post.create!(author: "Dracula", title: "It was not by my hands...", body: "That i was once again given flesh.")
+    post_1 = create(:post)
+    post_2 = create(:post, author: "Poster2", title: "Title for Post2",
+                    body: "Body for Post2.")
+    post_3 = create(:post, author: "Poster3", title: "Title for Post3",
+                    body: "Body for Post3.")
+    post_4 = create(:post, author: "Poster4", title: "Title for Post4",
+                    body: "Body for Post4.")
 
     visit root_path
-    expect(page).to have_content "John Doe goes to mars"
-    expect(page).to have_content "Mary poppins sings death metal"
-    expect(page).to have_content "Die, Monster!"
-    expect(page).to have_content "It was not by my hands..."
+
+    expect(page).to have_content post_1.author
+    expect(page).to have_content post_1.title
+    expect(page).to have_content post_1.body
+    expect(page).to have_content post_2.author
+    expect(page).to have_content post_2.title
+    expect(page).to have_content post_2.body
+    expect(page).to have_content post_3.author
+    expect(page).to have_content post_3.title
+    expect(page).to have_content post_3.body
+    expect(page).to have_content post_4.author
+    expect(page).to have_content post_4.title
+    expect(page).to have_content post_4.body
   end
 end
