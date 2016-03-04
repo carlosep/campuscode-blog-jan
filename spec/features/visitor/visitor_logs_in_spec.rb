@@ -12,6 +12,6 @@ feature 'User logs in' do
 
     expect(page).to have_content 'Sign Out'
     expect(page).to have_content 'Signed in successfully.'
+    # expect(page).not_to have_content 'New Post'
   end
-
 end

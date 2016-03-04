@@ -4,9 +4,9 @@
 <ul class="nav">
   <li><%= link_to home, root_path, :class => 'brand' %></li>
   <% if user_signed_in? %>
-    <%= link_to sign_out, destroy_user_session_path, :class => 'brand', method: :delete %>
+    <li><%= link_to sign_out, destroy_user_session_path, :class => 'brand', method: :delete %></li>
   <% else %>
-    <%= link_to sign_in, new_user_session_path, :class => 'brand' %>
-    <%= link_to sign_up, new_user_registration_path,  :class => 'brand' %>
+    <li><%= link_to sign_in, new_user_session_path, :class => 'brand' %></li>
+    <li><%= link_to sign_up, new_user_registration_path,  :class => 'brand' %></li>
   <% end %>
 </ul>
