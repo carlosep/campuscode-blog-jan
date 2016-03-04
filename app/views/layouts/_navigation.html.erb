@@ -1,3 +1,12 @@
+<% sign_in = t '.sign_in'; sign_up = t '.sign_up'%>
+<% sign_out = t '.sign_out'; home = t '.home';%>
+
 <ul class="nav">
-  <li><%= link_to "Home", root_path, :class => 'brand' %></li>
+  <li><%= link_to home, root_path, :class => 'brand' %></li>
+  <% if user_signed_in? %>
+    <%= link_to sign_out, destroy_user_session_path, :class => 'brand', method: :delete %>
+  <% else %>
+    <%= link_to sign_in, new_user_session_path, :class => 'brand' %>
+    <%= link_to sign_up, new_user_registration_path,  :class => 'brand' %>
+  <% end %>
 </ul>

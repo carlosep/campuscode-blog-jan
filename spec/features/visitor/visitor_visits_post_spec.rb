@@ -1,6 +1,6 @@
-require "rails_helper"
+require 'rails_helper'
 
-feature "User visits post" do
+feature 'User visits post' do
   scenario "successfully" do
     post_1 = create(:post)
 
@@ -11,7 +11,7 @@ feature "User visits post" do
     expect(page).to have_content post_1.body
   end
 
-  scenario "through homepage" do
+  scenario 'through homepage' do
     post_1 = create(:post)
 
     visit root_path
@@ -22,7 +22,7 @@ feature "User visits post" do
     expect(page).to have_content post_1.body
   end
 
-  scenario "and sees comments" do
+  scenario "and sees comments, but can't comment" do
     post_1 = create(:post)
 
     visit post_path(post_1)
@@ -35,6 +35,16 @@ feature "User visits post" do
       expect(page).to have_content comment.email
       expect(page).to have_content comment.text
     end
+    expect(page).to have_content 'Log in to leave a comment.'
+  end
+  scenario 'and wants to comment, so it is redirected' do
+    post_1 = create(:post)
+
+    visit post_path(post_1)
+
+    click_on 'Log in'
+
+    expect(page).to have_current_path(user_session_path)
   end
 
 end

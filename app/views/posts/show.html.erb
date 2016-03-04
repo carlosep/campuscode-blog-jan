@@ -27,6 +27,10 @@
   <% end %>
 <% end %>
 
-<h2>Write a comment:</h2>
+<% if current_user %>
+  <h2>Write a comment:</h2>
 
-<%= render 'posts/comment' %>
+  <%= render 'posts/comment' %>
+<% else %>
+    <%= link_to 'Log in', user_session_path %> to leave a comment.
+<% end %>
