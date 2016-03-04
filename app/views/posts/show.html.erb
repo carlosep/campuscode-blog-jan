@@ -21,10 +21,10 @@
 <h2>Comments: </h2>
 
 <% @post.comments.each do |comment| %>
-    <% if comment %>
-      <p><strong><%= comment.author %>:<br></strong> <%= (comment.email) %> </p>
-      <p><%= comment.text %></p>
-    <% end %>
+  <% if comment %>
+    <p><strong><%= comment.author %>:<br></strong> <%= (comment.email) %> </p>
+    <p><%= comment.text %></p>
+  <% end %>
 <% end %>
 
 <h2>Write a comment:</h2>
