@@ -6,7 +6,6 @@ feature 'User visits post' do
 
     visit post_path(post_1)
 
-    expect(page).to have_content post_1.author
     expect(page).to have_content post_1.title
     expect(page).to have_content post_1.body
   end
@@ -17,7 +16,6 @@ feature 'User visits post' do
     visit root_path
     click_on post_1.title
 
-    expect(page).to have_content post_1.author
     expect(page).to have_content post_1.title
     expect(page).to have_content post_1.body
   end
@@ -27,12 +25,10 @@ feature 'User visits post' do
 
     visit post_path(post_1)
 
-    expect(page).to have_content post_1.author
     expect(page).to have_content post_1.title
     expect(page).to have_content post_1.body
     post_1.comments.each do |comment|
-      expect(page).to have_content comment.author
-      expect(page).to have_content comment.email
+      #expect(page).to have_content comment.author
       expect(page).to have_content comment.text
     end
     expect(page).to have_content 'Log in to leave a comment.'

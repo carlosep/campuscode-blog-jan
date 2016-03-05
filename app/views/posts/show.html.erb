@@ -12,7 +12,6 @@
 
 <p>
   <strong>Author:</strong>
-  <%= @post.author %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
@@ -22,7 +21,7 @@
 
 <% @post.comments.each do |comment| %>
   <% if comment %>
-    <p><strong><%= comment.author %>:<br></strong> <%= (comment.email) %> </p>
+    <p><strong>[Nome do Autor]:<br></strong></p>
     <p><%= comment.text %></p>
   <% end %>
 <% end %>
