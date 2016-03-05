@@ -32,6 +32,7 @@ feature 'User signs up' do
 
     expect(page).to have_content 'Sign Up'
     expect(page).to have_content 'Sign In'
+    expect(page).to have_content "Name can't be blank"
     expect(page).not_to have_content 'Welcome! You have signed up successfully.'
   end
 end
