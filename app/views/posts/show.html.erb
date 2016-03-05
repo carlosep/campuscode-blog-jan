@@ -21,7 +21,7 @@
 
 <% @post.comments.each do |comment| %>
   <% if comment %>
-    <p><strong>[Nome do Autor]:<br></strong></p>
+    <p><strong><%= comment.user.name %>:<br></strong></p>
     <p><%= comment.text %></p>
   <% end %>
 <% end %>
