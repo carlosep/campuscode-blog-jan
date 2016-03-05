@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'User logs in' do
+feature 'Visitor logs in' do
   scenario "successfully" do
     user_1 = create(:user)
 

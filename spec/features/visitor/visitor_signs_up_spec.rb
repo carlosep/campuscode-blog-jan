@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'User signs up' do
+feature 'Visitor signs up' do
   scenario "successfully" do
     user_1 = build(:user)
 

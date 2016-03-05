@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'User visits post' do
+feature 'Visitor visits post' do
   scenario "successfully" do
     post_1 = create(:post)
 

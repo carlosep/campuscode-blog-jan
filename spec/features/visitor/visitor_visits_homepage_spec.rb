@@ -1,12 +1,12 @@
 require "rails_helper"
 
-feature "User visits homepage" do
+feature "Visitor visits homepage" do
   scenario "successfully" do
     visit root_path
     expect(page).to have_content "Listing Posts"
   end
 
-  scenario "User sees all posts" do
+  scenario "and sees all posts" do
     post_1 = create(:post)
     post_2 = create(:post, title: "Title for Post2", body: "Body for Post2.")
     post_3 = create(:post, title: "Title for Post3", body: "Body for Post3.")
