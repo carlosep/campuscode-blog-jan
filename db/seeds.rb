@@ -22,6 +22,8 @@ Post.create(title:'Eu',       body:'Sou sempre eu mesmo, mas com certeza não
                                     serei o mesmo pra sempre...')
 
 FactoryGirl.create(:user, name: 'John Doe', email: 'johndoe@blogjan.com',
-                   password: 'johndoerules')
+                   password: 'useruser')
 FactoryGirl.create(:user, name: 'Mary Doe', email: 'marydoe@blogjan.com',
-                   password: 'marydoerules')
+                   password: 'useruser')
+FactoryGirl.create(:admin, name: 'Carlos',   email: 'carlos@blogjan.com',
+                   password: 'adminadmin')
