@@ -517,6 +517,10 @@ $state-danger-text:              #a94442 !default;
 $state-danger-bg:                #f2dede !default;
 $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
 
+$state-gray-text:                #595959 !default;
+$state-gray-bg:                  #f2f2f2 !default;
+$state-gray-border:              darken(adjust-hue($state-gray-bg, -10), 5%) !default;
+
 
 //== Tooltips
 //
@@ -644,6 +648,10 @@ $alert-warning-border:        $state-warning-border !default;
 $alert-danger-bg:             $state-danger-bg !default;
 $alert-danger-text:           $state-danger-text !default;
 $alert-danger-border:         $state-danger-border !default;
+
+$alert-gray-bg:             $state-gray-bg !default;
+$alert-gray-text:           $state-gray-text !default;
+$alert-gray-border:         $state-gray-border !default;
 
 
 //== Progress bars

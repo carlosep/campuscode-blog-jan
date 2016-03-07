@@ -1,26 +1,29 @@
-<h1>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</h1>
+<div class="col-xs-12 col-md-10 col-md-offset-1">
+  <div	class="page-header">
+    <h1><%= @post.title %></h1>
+  </div>
+  <p class="lead text-justify"><%= @post.body %></p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
+  <hr>
 
-<h2>Comments: </h2>
-
-<% @post.comments.each do |comment| %>
-  <% if comment %>
-    <p><strong><%= comment.user.name %>:<br></strong></p>
-    <p><%= comment.text %></p>
+  <h3>Comments: </h3>
+  <% @post.comments.each do |comment| %>
+    <% if comment %>
+      <p><strong><%= comment.user.name %>:<br></strong></p>
+      <p><%= comment.text %></p>
+    <% end %>
   <% end %>
-<% end %>
 
-<% if current_user %>
-  <h2>Write a comment:</h2>
+  <hr>
 
-  <%= render 'posts/comment' %>
-<% else %>
+  <% if current_user %>
+    <%= render 'posts/comment' %>
+  <% else %>
+  <div class="alert-warning" role="alert">
+
+  </div>
+  <div class="alert alert-gray" role="alert">
     <%= link_to 'Log in', user_session_path %> to leave a comment.
-<% end %>
+  </div>
+  <% end %>
+</div>
