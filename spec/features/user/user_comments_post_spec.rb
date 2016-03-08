@@ -7,7 +7,7 @@ feature 'User comments post' do
     user_sign_in(user: user)
     click_on post.title
 
-    fill_in 'Text', with: 'Very good.'
+    fill_in user.name, with: 'Very good.'
 
     click_on 'Create Comment'
 

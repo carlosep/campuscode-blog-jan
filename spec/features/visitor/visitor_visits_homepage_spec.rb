@@ -3,7 +3,7 @@ require "rails_helper"
 feature "Visitor visits homepage" do
   scenario "successfully" do
     visit root_path
-    expect(page).to have_content "Listing Posts"
+    expect(page).to have_content "Welcome to Blog-Jan take a seat."
   end
 
   scenario "and sees all posts" do

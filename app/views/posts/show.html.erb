@@ -19,9 +19,6 @@
   <% if current_user %>
     <%= render 'posts/comment' %>
   <% else %>
-  <div class="alert-warning" role="alert">
-
-  </div>
   <div class="alert alert-gray" role="alert">
     <%= link_to 'Log in', user_session_path %> to leave a comment.
   </div>
