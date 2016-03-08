@@ -1,12 +1,26 @@
 <% sign_in = t '.sign_in'; sign_up = t '.sign_up'%>
 <% sign_out = t '.sign_out'; home = t '.home';%>
 
-<ul class="nav col-md-1">
-  <li><%= link_to home, root_path, :class => 'brand' %></li>
-  <% if user_signed_in? %>
-    <li><%= link_to sign_out, destroy_user_session_path, :class => 'brand', method: :delete %></li>
-  <% else %>
-    <li><%= link_to sign_in, new_user_session_path, :class => 'brand' %></li>
-    <li><%= link_to sign_up, new_user_registration_path,  :class => 'brand' %></li>
-  <% end %>
-</ul>
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button	type="button"	class="navbar-toggle	collapsed"	data-toggle="collapse"	data-target="#collapibleMenu">
+				<span	class="icon-bar"></span>
+				<span	class="icon-bar"></span>
+				<span	class="icon-bar"></span>
+			</button>
+      <a href="#" class="navbar-brand">Blog-Jan</a>
+    </div>
+    <div	class="collapse	navbar-collapse"	id="collapibleMenu">
+      <ul	class="nav	navbar-nav	navbar-left">
+        <li><%= link_to home, root_path %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to sign_out, destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to sign_in, new_user_session_path %></li>
+          <li><%= link_to sign_up, new_user_registration_path %></li>
+        <% end %>
+			</ul>
+    </div>
+  </div>
+</div>
