@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'Visitor signs up' do
-  scenario "successfully" do
+  scenario 'successfully' do
     user_1 = build(:user)
 
     visit root_path
@@ -10,7 +10,7 @@ feature 'Visitor signs up' do
     fill_in 'Email', with: user_1.email
     fill_in 'Password', with: user_1.password
     fill_in 'Password confirmation', with: user_1.password
-    within ('.actions') do
+    within '.actions' do
       click_on 'Sign up'
     end
 
@@ -18,7 +18,7 @@ feature 'Visitor signs up' do
     expect(page).to have_content 'Welcome! You have signed up successfully.'
   end
 
-  scenario "without a name and fails" do
+  scenario 'without a name and fails' do
     user_1 = build(:user)
 
     visit root_path
@@ -26,7 +26,7 @@ feature 'Visitor signs up' do
     fill_in 'Email', with: user_1.email
     fill_in 'Password', with: user_1.password
     fill_in 'Password confirmation', with: user_1.password
-    within ('.actions') do
+    within '.actions' do
       click_on 'Sign up'
     end
 

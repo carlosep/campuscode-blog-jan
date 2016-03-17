@@ -39,6 +39,7 @@ group :development, :test do
   #Testing
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'rubocop', '~> 0.37.2', require: false
 end
 
 group :development do

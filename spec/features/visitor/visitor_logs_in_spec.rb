@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'Visitor logs in' do
-  scenario "successfully" do
+  scenario 'successfully' do
     user_1 = create(:user)
 
     visit root_path

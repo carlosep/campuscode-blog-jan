@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'User comments post' do
-  scenario "successfully" do
+  scenario 'successfully' do
     post = create(:post)
     user = create(:user)
     user_sign_in(user: user)
