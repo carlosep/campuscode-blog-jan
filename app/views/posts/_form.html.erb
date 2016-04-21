@@ -25,7 +25,7 @@
     <div class="actions">
       <%= f.submit submit_text, class: 'btn	btn-success' %>
       <%= link_to 'Cancel', posts_path, class:"btn btn-primary" %>
-      <% if current_page?(edit_post_path(@post)) %>
+      <% if !current_page?(new_post_path) %>
         <%= button_tag 'Reset', type: :reset, class:"btn btn-default" %>
       <% end %>
     </div>
