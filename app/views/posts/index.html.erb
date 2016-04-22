@@ -5,7 +5,7 @@
   <% end %>
 </div>
 <div class="row">
-  <% @posts.reverse_each do |post| %>
+  <% @posts.last(20).reverse_each do |post| %>
     <div	class="col-sm-12 col-md-6">
       <h2><%= link_to post.title, post %></h2>
       <p class="text-justify"><%= post.body %></p>
