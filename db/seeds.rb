@@ -20,9 +20,9 @@ FactoryGirl.create(:user, name: 'Joseph Smith', email: 'joseph@blogjan.com',
                    password: 'useruser')
 FactoryGirl.create(:user, name: 'Mary Doe', email: 'marydoe@blogjan.com',
                    password: 'useruser')
-FactoryGirl.create(:user, name: 'Vicky Vale', email: 'marydoe@blogjan.com',
+FactoryGirl.create(:user, name: 'Vicky Vale', email: 'vicky@blogjan.com',
                    password: 'useruser')
-FactoryGirl.create(:user, name: 'Sarah Connor', email: 'marydoe@blogjan.com',
+FactoryGirl.create(:user, name: 'Sarah Connor', email: 'sarah@blogjan.com',
                    password: 'useruser')
 FactoryGirl.create(:admin, name: 'admin',   email: 'admin@admin.com',
                    password: 'adminadmin')
