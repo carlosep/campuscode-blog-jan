@@ -3,7 +3,7 @@
 </div>
 <div class="row">
   <% @posts.reverse_each do |post| %>
-    <div	class="col-sm-12 col-md-6">
+    <div	class="col-sm-12 col-md-6 post">
       <h2><%= link_to post.title, post %></h2>
       <p class="text-justify">
         <%= post.body.length > 80 ? post.body[0,80] + '...' : post.body %>
@@ -17,4 +17,3 @@
     </div>
   <% end %>
 </div>
-<br><br>
