@@ -6,5 +6,5 @@ Rails.application.routes.draw do
 
   resources :comments, only: [:show, :destroy]
 
-  root "posts#index"
+  root "home#index"
 end
