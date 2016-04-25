@@ -21,7 +21,7 @@
   <div class="row">
   <%unless @current_month.empty?%>
     <hr>
-    <h3>Posts of the month</h3>
+    <h3>Posts of the past month</h3>
     <% @current_month.reverse_each do |post| %>
       <%= render post %>
     <% end %>
@@ -30,7 +30,7 @@
   <div class="row">
   <%unless @current_year.empty?%>
     <hr>
-    <h3>One year old posts</h3>
+    <h3>Posts of the past year</h3>
     <% @current_year.reverse_each do |post| %>
       <%= render post %>
     <% end %>
