@@ -2,18 +2,21 @@
   <h1>Choose your favorite post <small>pick any one.</small></h1>
 </div>
 <div class="row">
-  <% @posts.reverse_each do |post| %>
-    <div	class="col-sm-12 col-md-6 post">
-      <h2><%= link_to post.title, post %></h2>
-      <p class="text-justify">
-        <%= post.body.length > 80 ? post.body[0,80] + '...' : post.body %>
-      </p>
-      <%= link_to 'More...', post %><br><br>
-      <p>Comments: <%= post.comments.count%></p>
-      <% if current_user.try(:admin?) %>
-        <%= link_to 'Edit', edit_post_path(post), :class=>"btn	btn-primary" %>
-        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn	btn-primary" %>
-      <% end %>
-    </div>
+  <%unless @today.empty?%>
+    <h3>Fresh posts</h3>
+    <% @today.reverse_each do |post| %>
+      <div	class="col-sm-12 col-md-6 post">
+        <h2><%= link_to post.title, post %></h2>
+        <p class="text-justify">
+          <%= post.body.length > 80 ? post.body[0,80] + '...' : post.body %>
+        </p>
+        <%= link_to 'More...', post %><br><br>
+        <p>Comments: <%= post.comments.count%></p>
+        <% if current_user.try(:admin?) %>
+          <%= link_to 'Edit', edit_post_path(post), :class=>"btn	btn-primary" %>
+          <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn	btn-primary" %>
+        <% end %>
+      </div>
+    <% end %>
   <% end %>
 </div>

@@ -4,7 +4,27 @@ class PostsController < ApplicationController
   before_action :authenticate_admin, except: [:show, :index]
 
   def index
-    @posts = Post.all
+    @past_years = []
+    @current_year = []
+    @current_month = []
+    @current_week = []
+    @today = []
+    Post.all.each do |post|
+      today = Date.parse Time.now.to_s
+      post_date = Date.parse post.created_at.to_s
+      days = (today - post_date).to_i
+      if days > 365
+        @past_years << post
+      elsif days > 30
+        @current_year << post
+      elsif days > 7
+        @current_month << post
+      elsif days > 0
+        @current_week << post
+      else
+        @today << post
+      end
+    end
   end
 
   def show
