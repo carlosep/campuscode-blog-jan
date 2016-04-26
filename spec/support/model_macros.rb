@@ -10,19 +10,14 @@ module ModelsMacros
     end
   end
 
-  # def admin_sign_in(redirect: nil)
-  #   redirect ||= false
-  #   admin = User.create(email: 'admin@socialrecipes.com.br',
-  #                       password: '12345678', admin: true)
-  #   visit new_user_session_path if redirect
-  #   fill_in 'Email', with: admin.email
-  #   fill_in 'Password', with: admin.password
-  #   within('.actions') do
-  #     click_on 'Log in'
-  #   end
-  # end
-  #
-  # def image_upload_path
-  #   Rails.root + 'spec/fixtures/sample.jpg'
-  # end
+  def admin_sign_in(admin: nil, redirect: nil)
+    redirect ||= true
+    admin ||= create(:admin)
+    visit new_user_session_path if redirect
+    fill_in 'Email', with: admin.email
+    fill_in 'Password', with: admin.password
+    within('.actions') do
+      click_on 'Log in'
+    end
+  end
 end
