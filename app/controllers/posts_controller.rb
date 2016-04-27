@@ -78,7 +78,7 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :body, :subtitle)
+    params.require(:post).permit(:title, :body, :subtitle, :image)
   end
 end
 # rubocop:enable Metrics/LineLength
