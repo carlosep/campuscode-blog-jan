@@ -26,6 +26,11 @@
       <%= f.label :body, for: "bodyField" %><br>
       <%= f.text_area :body, class: 'form-control', placeholder: 'What would you like to share with the world?', id: 'bodyField' %>
     </div>
+    <div class="form-group">
+      <%= f.label :image %>
+ +    <%= f.hidden_field :image_cache %>
+      <%= f.file_field :image,	class:"form-control" %>
+    </div>
     <div class="actions">
       <%= f.submit submit_text, class: 'btn	btn-success' %>
       <%= link_to 'Cancel', posts_path, class:"btn btn-primary" %>
