@@ -1,11 +1,11 @@
 <div	class="col-sm-12 col-md-6 post">
-  <%= image_tag(post.image_url(:thumbnail))%>
   <h2><%= link_to post.title, post %></h2>
+  <%= image_tag(post.image_url(:thumbnail))%>
   <h4><em><%= post.subtitle %></em></h4>
   <p class="text-justify post-text">
     <%= post.body.length > 80 ? post.body[0,80] + '...' : post.body %>
   </p>
-  <%= link_to 'More...', post %><br><br>
+  <p> <%= link_to 'More...', post %> </p>
   <p>Comments: <%= post.comments.count%></p>
   <% if current_user.try(:admin?) %>
     <%= link_to 'Edit', edit_post_path(post), :class=>"btn	btn-primary" %>

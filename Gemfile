@@ -10,6 +10,7 @@ gem 'devise'
 gem 'netrc', '~> 0.11.0'
 gem 'carrierwave'
 gem 'cloudinary'
+gem 'file_validators'
 
 # bootstrap
 gem 'sass-rails', '>= 3.2'
