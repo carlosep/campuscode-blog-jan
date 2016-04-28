@@ -16,5 +16,4 @@
 !/log/.keep
 /tmp
 
-/public/seed-images/*
 /public/uploads/tmp/*
