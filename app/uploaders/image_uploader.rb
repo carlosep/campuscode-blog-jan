@@ -8,12 +8,14 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   version :standard do
    eager
-   resize_to_fill(460, 345)
+   cloudinary_transformation :radius => 5, :width => 1000, :height => 250,
+                             :crop => :thumb, :gravity => :center
   end
 
   version :thumbnail do
    eager
-   resize_to_fill(150, 110)
+   cloudinary_transformation :radius => 5, :width => 550, :height => 150,
+                             :crop => :thumb, :gravity => :center
   end
 
   def public_id
