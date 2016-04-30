@@ -10,11 +10,16 @@ This project is always active. As I learn new things, I implement them.
 * **Visitor can view individual posts or all of them**
 * **Visitor can authenticate to leave comments**
 * **Bootstrap added for responsiveness**
+* **Newer posts are shown on top**
+* **Only Last 10 posts are shown on homepage**
+* **Posts' texts on homepage have a limited length**
+* **Posts have a subtitle**
+* **Posts have a cover image**
+* **Blog has an index with all posts organized by time**
 
 ## Future improvements
-* **Newer posts will be shown on top**
-* **Only Last 20 posts are shown on homepage**
-* **Posts texts on homepage will have a limited length**
-* **Posts will have a cover image**
+* **Posts will be formattable**
 * **Posts will have tags**
+* **Blog will have a search bar**
+* **Blog will have share buttons**
 * **Visitor will be able to login with facebook**
