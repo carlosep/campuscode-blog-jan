@@ -1,3 +1,5 @@
+<% javascript_include_tag Ckeditor.cdn_url %>
+
 <div class="page-header">
   <h1><%= header_text %></h1>
 </div>
@@ -24,7 +26,7 @@
     </div>
     <div class="form-group">
       <%= f.label :body, for: "bodyField" %><br>
-      <%= f.text_area :body, class: 'form-control', placeholder: 'What would you like to share with the world?', id: 'bodyField' %>
+      <%= f.cktext_area :body, :value => 'Default value', :id => 'sometext' %>
     </div>
     <div class="form-group">
       <%= f.label :image %>

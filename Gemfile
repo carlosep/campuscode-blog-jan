@@ -22,6 +22,8 @@ gem 'rails_12factor', group: :production
 
 gem "factory_girl_rails", "~> 4.0"
 
+gem 'ckeditor'
+
 # Use SCSS for stylesheets
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

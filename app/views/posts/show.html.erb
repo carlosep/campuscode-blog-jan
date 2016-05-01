@@ -7,7 +7,7 @@
     <h3><em><%= @post.subtitle %></em></h3>
   </div>
   <h3> <small> <%= @post.created_at.strftime('%Y, %B %d')%> </small> </h3>
-  <p class="lead text-justify"><%= @post.body %></p>
+  <p class="lead text-justify"><%= simple_format @post.body %></p>
 
   <hr>
 
